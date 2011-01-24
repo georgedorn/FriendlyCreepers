@@ -69,13 +69,11 @@ public class FriendlyCreepers extends JavaPlugin {
 	/**
 	 * Register a hook with default priority
 	 * 
-	 * TODO: Change priority back to NORMAL when real permissions are in
-	 * 
 	 * @param hook
 	 *            the hook to register
 	 */
 	private void registerEvent(Listener listener, Type eventType) {
-		registerEvent(listener, eventType, Priority.Monitor);
+		registerEvent(listener, eventType);
 	}
 	
 	/**
@@ -93,8 +91,6 @@ public class FriendlyCreepers extends JavaPlugin {
 
 	/**
 	 * Register all of the events used by FriendlyCreepers
-	 * 
-	 * TODO: Change priority back to NORMAL when real permissions are in
 	 */
 	private void registerEvents() {
 		/* Entity events */
