@@ -62,8 +62,8 @@ public class FriendlyCreepers extends JavaPlugin {
 		registerEvents();
 		setup();
 
-		log("Creepers are:\t" + (Boolean.parseBoolean(properties.getProperty("enable-creepers", "false")) ? "Neutralized" : "Enabled"));
-		log("TNT is:\t\t" + (Boolean.parseBoolean(properties.getProperty("enable-tnt", "false")) ? "Neutralized" : "Enabled"));
+		log("Creepers are:\t" + (Boolean.parseBoolean(properties.getProperty("enable-creepers", "false")) ? "Enabled" : "Neutralized"));
+		log("TNT is:\t\t" + (Boolean.parseBoolean(properties.getProperty("enable-tnt", "false")) ? "Enabled" : "Neutralized"));
 	}
 
 	/**
