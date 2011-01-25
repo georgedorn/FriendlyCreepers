@@ -73,7 +73,7 @@ public class FriendlyCreepers extends JavaPlugin {
 	 *            the hook to register
 	 */
 	private void registerEvent(Listener listener, Type eventType) {
-		registerEvent(listener, eventType);
+		registerEvent(listener, eventType, Priority.Normal);
 	}
 	
 	/**
