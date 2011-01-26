@@ -106,6 +106,8 @@ public class FriendlyCreepers extends JavaPlugin {
 			FileWriter fileWriter = new FileWriter(file);
 			
 			properties.store(fileWriter, "");
+			
+			fileWriter.close();
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
@@ -156,8 +158,8 @@ public class FriendlyCreepers extends JavaPlugin {
 		 */
 		try {
 			FileReader fileReader = new FileReader(propertiesFile);
-			
 			properties.load(fileReader);
+			fileReader.close();
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
