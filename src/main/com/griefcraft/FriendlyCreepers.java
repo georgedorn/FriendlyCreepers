@@ -64,10 +64,10 @@ public class FriendlyCreepers extends JavaPlugin {
 
 		log("Creepers are:\t" + (Boolean.parseBoolean(properties.getProperty("enable-creepers", "false")) ? "Enabled" : "Neutralized"));
 		log("TNT is:\t\t" + (Boolean.parseBoolean(properties.getProperty("enable-tnt", "false")) ? "Enabled" : "Neutralized"));
-                log("Creeper min-altitude:\t" + (Integer.parseInt(properties.getProperty("creeper-min-altitude", "0")));
-                log("Creeper max-altitude:\t" + (Integer.parseInt(properties.getProperty("creeper-max-altitude", "128")));
-                log("TNT min-altitude:\t" + (Integer.parseInt(properties.getProperty("tnt-min-altitude", "0")));
-                log("TNT max-altitude:\t" +  (Integer.parseInt(roperties.getProperty("tnt-max-altitude", "128")));
+                log("Creeper min-altitude:\t" + (Integer.parseInt(properties.getProperty("creeper-min-altitude", "0"))));
+                log("Creeper max-altitude:\t" + (Integer.parseInt(properties.getProperty("creeper-max-altitude", "128"))));
+                log("TNT min-altitude:\t" + (Integer.parseInt(properties.getProperty("tnt-min-altitude", "0"))));
+                log("TNT max-altitude:\t" +  (Integer.parseInt(properties.getProperty("tnt-max-altitude", "128"))));
 	}
 
 	/**
