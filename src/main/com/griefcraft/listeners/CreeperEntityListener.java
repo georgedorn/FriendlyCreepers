@@ -30,19 +30,45 @@ public class CreeperEntityListener extends EntityListener {
 		
 		Entity entity = event.getEntity();
 		boolean shouldExplode = true;
-		
+		Integer alt = entity.getLocation().getY();		
 		if(entity == null) {
 			/*
 			 * It's TNT!
 			 */
 
 			shouldExplode = Boolean.parseBoolean(parent.getProperties().getProperty("enable-tnt", "false"));
+                        if(shouldExplode){
+				Integer max_alt = Integer.parseInt(parent.getProperties().getProperty("tnt-max-altitude","128"));
+				if (alt > max_alt){
+					shouldExplode = false;
+				}
+			}
+			if(shouldExplode){
+				Integer min_alt = Integer.parseInt(parent.getProperties().getProperty("tnt-min-altitude","0"));
+				if (alt < min_alt){
+					shouldExplode = false;
+				}	
+			
+			}
 		} else if(entity.getClass().getSimpleName().equals(CREEPER_CLASS)) {
 			/*
 			 * Fowl creeper!
 			 */
 			
 			shouldExplode = Boolean.parseBoolean(parent.getProperties().getProperty("enable-creepers", "false"));
+                        if(shouldExplode){
+				Integer max_alt = Integer.parseInt(parent.getProperties().getProperty("creeper-max-altitude","128"));
+				if (alt > max_alt){
+					shouldExplode = false;
+				}
+			}
+			if(shouldExplode){
+				Integer min_alt = Integer.parseInt(parent.getProperties().getProperty("creeper-min-altitude","0"));
+				if (alt < min_alt){
+					shouldExplode = false;
+				}	
+			
+			}
 		}
 		
 		/*
