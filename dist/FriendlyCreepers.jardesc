@@ -12,6 +12,7 @@
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
         <javaElement handleIdentifier="=FriendlyCreepers/src\/main"/>
+        <file path="/FriendlyCreepers/plugin.yml"/>
         <folder path="/FriendlyCreepers/src"/>
     </selectedElements>
 </jardesc>
