@@ -6,13 +6,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.bukkit.Server;
-import org.bukkit.event.Listener;
 import org.bukkit.event.Event.Priority;
 import org.bukkit.event.Event.Type;
+import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityListener;
-import org.bukkit.plugin.PluginDescriptionFile;
-import org.bukkit.plugin.PluginLoader;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.griefcraft.listeners.CreeperEntityListener;
@@ -20,21 +17,10 @@ import com.griefcraft.listeners.CreeperEntityListener;
 public class FriendlyCreepers extends JavaPlugin {
 
 	/**
-	 * The entity listener to listen for explosions
-	 */
-	private EntityListener entityListener;
-	
-	/**
 	 * Properties
 	 */
 	private Properties properties;
-	
-	public FriendlyCreepers(PluginLoader pluginLoader, Server instance, PluginDescriptionFile desc, File folder, File plugin, ClassLoader cLoader) {
-		super(pluginLoader, instance, desc, folder, plugin, cLoader);
-		
-		entityListener = new CreeperEntityListener(this);
-		setup();
-	}
+	private EntityListener entityListener = new CreeperEntityListener(this);
 	
 	/**
 	 * @return the Properties object
